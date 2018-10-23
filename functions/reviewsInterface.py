@@ -10,7 +10,7 @@ def updateReviewsCollection(lastServerReviewsDate):
 
     newReviews = []    #contains reviews from sources which are not on the server yet
 
-    for source in REVIEWS_SOURCES:
+    for source in __REVIEWS_SOURCES:
         newReviews.extend(__getListOfNewReviewsFromSource(source))
 
     newReviews.sort(key = __sortByDate)
